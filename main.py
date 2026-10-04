@@ -17,7 +17,6 @@ class Lab1Window(QMainWindow):
         self.label.setStyleSheet("font-size: 16px; qproperty-alignment: AlignCenter;")
         layout.addWidget(self.label)
 
-        # Кнопка
         self.button = QPushButton("Мое предсказание")
         self.button.clicked.connect(self.on_button_click)
         layout.addWidget(self.button)
@@ -29,7 +28,7 @@ class Lab1Window(QMainWindow):
             self.label.setText("Файл изображения не найден!\nПоложите im.png в папку")
             return
 
-        # Загружаем изображение
+
         pixmap = QPixmap(self.image)
         if pixmap.isNull():
             self.label.setText("Не удалось загрузить изображение\nПроверьте формат")
